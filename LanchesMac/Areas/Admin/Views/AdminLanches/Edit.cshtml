@@ -1,0 +1,87 @@
+﻿@model LanchesMac.Models.Lanche
+
+@{
+	ViewData["Title"] = "Edit";
+}
+
+<h1>Editar Lanche</h1>
+
+<hr />
+<div class="row bg-light pt-2 rounded">
+	<div class="col-md">
+		<form asp-action="Edit" class="row">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<input type="hidden" asp-for="LancheId" />
+			<div class="col">
+
+				<div class="form-group">
+					<label asp-for="Nome" class="control-label"></label>
+					<input asp-for="Nome" class="form-control" />
+					<span asp-validation-for="Nome" class="text-danger"></span>
+				</div>
+				<div class="form-group">
+					<label asp-for="DescricaoCurta" class="control-label"></label>
+					<textarea asp-for="DescricaoCurta" class="form-control"></textarea>
+					<span asp-validation-for="DescricaoCurta" class="text-danger"></span>
+				</div>
+				<div class="form-group">
+					<label asp-for="DescricaoDetalhada" class="control-label"></label>
+					<textarea asp-for="DescricaoDetalhada" class="form-control"></textarea>
+					<span asp-validation-for="DescricaoDetalhada" class="text-danger"></span>
+				</div>
+				<div class="form-group">
+					<label asp-for="Preco" class="control-label"></label>
+					<input asp-for="Preco" class="form-control" />
+					<span asp-validation-for="Preco" class="text-danger"></span>
+				</div>
+			</div>
+			<div class="row">
+
+				<div class="form-group col-md-6">
+					<label asp-for="ImagemUrl" class="control-label"></label>
+					<input asp-for="ImagemUrl" class="form-control" />
+					<span asp-validation-for="ImagemUrl" class="text-danger"></span>
+				</div>
+				<div class="form-group col-md-6">
+					<img src="@Model.ImagemUrl" style="max-height: 300px;" />
+				</div>
+			</div>
+				<div class="form-group">
+					<label asp-for="ImagemThumbnailUrl" class="control-label"></label>
+					<input asp-for="ImagemThumbnailUrl" class="form-control" />
+					<span asp-validation-for="ImagemThumbnailUrl" class="text-danger"></span>
+				</div>
+			<div class="row">
+				<div class="form-group mt-2 col-sm-4 d-flex justify-content-center align-items-center flex-column">
+					<label class="control-label">Marcar como Preferido?</label>
+					<br />
+					<label class="form-check-label">
+						<input class="form-check-input" asp-for="IsLanchePreferido" /> @Html.DisplayNameFor(model => model.IsLanchePreferido)
+					</label>
+				</div>
+				<div class="form-group mt-2 col-sm-4 d-flex justify-content-center align-items-center flex-column">
+					<label class="control-label">Marcar como em Estoque?</label>
+					<br />
+					<label class="form-check-label">
+						<input class="form-check-input" asp-for="EmEstoque" /> @Html.DisplayNameFor(model => model.EmEstoque)
+					</label>
+				</div>
+				<div class="form-group col-sm-4 d-flex justify-content-center align-items-center flex-column">
+					<label asp-for="CategoriaId" class="control-label mt-3"></label>
+					<select asp-for="CategoriaId" class="form-control mt-3" asp-items="ViewBag.CategoriaId"></select>
+					<span asp-validation-for="CategoriaId" class="text-danger"></span>
+				</div>
+			</div>
+			<div class="d-flex justify-content-center my-3">
+				<div class="form-group">
+					<input type="submit" value="Salvar" class="btn btn-primary" />
+				</div>
+				<div class="mx-1">
+					<a class="btn btn-secondary" asp-action="Index">Voltar para a Lista</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+

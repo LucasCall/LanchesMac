@@ -1,0 +1,70 @@
+﻿@{
+	ViewBag.Title = "Arquivos";
+}
+
+@if (Model.Files != null)
+{
+	<h3>Imagens:</h3>
+	<hr />
+	var caminho = Model.PathImagesProdutos;
+	<div class="row">
+        @foreach (FileInfo file in Model.Files)
+        {
+            <div class="col-md">
+                <img src="~/@caminho/@file.Name" width="125" height="125" title="@file.Name" asp-append-version="true">
+                <div style="padding:10px;text-align:left">
+                    <p>@file.Name</p>
+                    <button class="btn btn-danger delete-button" data-file-name="@file.Name"><i class="bi bi-trash pe-2"></i>Deletar</button>
+                </div>
+            </div>
+        }
+	</div>
+}
+
+<div id="confirmDeleteModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirmação</h5>
+
+            </div>
+            <div class="modal-body">
+                <p>Deseja realmente excluir esta imagem?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button id="confirmDeleteButton" type="button" class="btn btn-danger">Excluir</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            // Evento de clique para o botão de exclusão
+            $(".delete-button").click(function () {
+                var fileName = $(this).data("file-name");
+                // Define o nome do arquivo no modal
+                $("#confirmDeleteModal .modal-body p").text("Deseja realmente excluir o arquivo " + fileName + "?");
+                // Define o nome do arquivo no botão de confirmação do modal
+                $("#confirmDeleteButton").data("file-name", fileName);
+                // Exibe o modal
+                $("#confirmDeleteModal").modal("show");
+            });
+
+            // Evento de clique para o botão de confirmação de exclusão no modal
+            $("#confirmDeleteButton").click(function () {
+                var fileName = $(this).data("file-name");
+                // Redireciona para a ação de exclusão com o nome do arquivo como parâmetro
+                window.location.href = "@Url.Action("Deletefile","AdminImagens")?fname=" + fileName;
+            });
+
+            // Evento de clique para o botão "Cancelar" no modal
+            $("#confirmDeleteModal .btn-secondary").click(function () {
+                // Fecha o modal
+                $("#confirmDeleteModal").modal("hide");
+            });
+        });
+    </script>
+}

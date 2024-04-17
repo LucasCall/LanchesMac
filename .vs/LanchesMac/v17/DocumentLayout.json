@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\projetos\\LanchesMac\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F7044FA7-A0A8-4A78-B503-B8D939965E77}|LanchesMac\\LanchesMac.csproj|f:\\projetos\\lanchesmac\\lanchesmac\\views\\shared\\components\\carrinhocompraresumo\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F7044FA7-A0A8-4A78-B503-B8D939965E77}|LanchesMac\\LanchesMac.csproj|solutionrelative:lanchesmac\\views\\shared\\components\\carrinhocompraresumo\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7044FA7-A0A8-4A78-B503-B8D939965E77}|LanchesMac\\LanchesMac.csproj|f:\\projetos\\lanchesmac\\lanchesmac\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7044FA7-A0A8-4A78-B503-B8D939965E77}|LanchesMac\\LanchesMac.csproj|solutionrelative:lanchesmac\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7044FA7-A0A8-4A78-B503-B8D939965E77}|LanchesMac\\LanchesMac.csproj|f:\\projetos\\lanchesmac\\lanchesmac\\lanchesmac.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F7044FA7-A0A8-4A78-B503-B8D939965E77}|LanchesMac\\LanchesMac.csproj|solutionrelative:lanchesmac\\lanchesmac.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "F:\\projetos\\LanchesMac\\LanchesMac\\Views\\Shared\\Components\\CarrinhoCompraResumo\\Default.cshtml",
+              "RelativeDocumentMoniker": "LanchesMac\\Views\\Shared\\Components\\CarrinhoCompraResumo\\Default.cshtml",
+              "ToolTip": "F:\\projetos\\LanchesMac\\LanchesMac\\Views\\Shared\\Components\\CarrinhoCompraResumo\\Default.cshtml",
+              "RelativeToolTip": "LanchesMac\\Views\\Shared\\Components\\CarrinhoCompraResumo\\Default.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-17T22:47:39.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\projetos\\LanchesMac\\LanchesMac\\Program.cs",
+              "RelativeDocumentMoniker": "LanchesMac\\Program.cs",
+              "ToolTip": "F:\\projetos\\LanchesMac\\LanchesMac\\Program.cs",
+              "RelativeToolTip": "LanchesMac\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFMAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T22:42:27.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LanchesMac",
+              "DocumentMoniker": "F:\\projetos\\LanchesMac\\LanchesMac\\LanchesMac.csproj",
+              "RelativeDocumentMoniker": "LanchesMac\\LanchesMac.csproj",
+              "ToolTip": "F:\\projetos\\LanchesMac\\LanchesMac\\LanchesMac.csproj",
+              "RelativeToolTip": "LanchesMac\\LanchesMac.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-17T22:40:40.682Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

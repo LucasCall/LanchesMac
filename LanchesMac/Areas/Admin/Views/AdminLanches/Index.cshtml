@@ -1,0 +1,86 @@
+﻿@model ReflectionIT.Mvc.Paging.PagingList<LanchesMac.Models.Lanche>
+
+@{
+	ViewData["Title"] = "Index";
+}
+
+<h1>Lanches</h1>
+
+<form method="get" class="form-inline">
+	<input name="filter" class="form-control" placeholder="filtro"
+			value="@Model.RouteValue["filter"]" />
+	<button type="submit" class="btn btn-info"> Procurar</button>
+</form>
+
+Total de Lanches : @Model.TotalRecordCount
+<div>
+	<vc:pager paging-list="@Model"></vc:pager>
+</div>
+
+<p>
+	<a class="btn btn-primary" asp-action="Create">
+		<i class="bi bi-plus-lg pe-1"></i>Criar Lanche
+	</a>
+</p>
+
+<table class="table align-middle table-striped">
+	<thead>
+		<tr class="align-middle">
+			<th>
+				@Html.DisplayNameFor(model => model.Nome)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.DescricaoCurta)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.DescricaoDetalhada)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Preco)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.IsLanchePreferido)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.EmEstoque)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Categoria)
+			</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td class="td-Nome">
+					@Html.DisplayFor(modelItem => item.Nome)
+				</td>
+				<td class="td-DescricaoCurta">
+					@Html.DisplayFor(modelItem => item.DescricaoCurta)
+				</td>
+				<td class="td-DescricaoDetalhada">
+					@Html.DisplayFor(modelItem => item.DescricaoDetalhada)
+				</td>
+				<td class="td-preco">
+					@Html.DisplayFor(modelItem => item.Preco)
+				</td>
+				<td class="td-IsLanchePreferido">
+					@Html.DisplayFor(modelItem => item.IsLanchePreferido)
+				</td>
+				<td class="td-EmEstoque">
+					@Html.DisplayFor(modelItem => item.EmEstoque)
+				</td>
+				<td class="td-CategoriaNome">
+					@Html.DisplayFor(modelItem => item.Categoria.CategoriaNome)
+				</td>
+				<td class="td-actions">
+					<a class="btn btn-warning w-100" asp-action="Edit" asp-route-id="@item.LancheId"><i class="bi bi-pencil-square pe-1"></i>Editar</a>
+					<a class="btn btn-secondary my-1 w-100" asp-action="Details" asp-route-id="@item.LancheId"><i class="bi bi-file-text pe-1"></i>Detalhes</a>
+					<a class="btn btn-danger w-100" asp-action="Delete" asp-route-id="@item.LancheId"><i class="bi bi-trash p3-1"></i>Deletar</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

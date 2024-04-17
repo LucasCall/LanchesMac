@@ -1,0 +1,29 @@
+﻿@model LanchesMac.Models.Categoria
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalhes de Categoria</h1>
+
+<div>
+    <hr />
+    <dl class="row bg-light pt-2 rounded">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CategoriaNome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CategoriaNome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+    </dl>
+</div>
+<div class="col d-flex justify-content-center my-3">
+    <a class="btn btn-primary mx-1" asp-action="Edit" asp-route-id="@Model?.CategoriaId">Editar Lanche</a>
+    <a class="btn btn-secondary mx-1" asp-action="Index">Voltar para a Lista</a>
+</div>
